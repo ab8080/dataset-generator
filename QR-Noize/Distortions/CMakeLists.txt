@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( Distortions )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_library(Distortions Distortions.hpp)
+set_target_properties(Distortions PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries( Distortions ${OpenCV_LIBS} )
